@@ -43,14 +43,14 @@
   --sentence-position: "above"; /* "above", "below" the definition box*/
   --audio-buttons: "header"; /* "header", "fixed", "alt" */
   --sentence-furigana: "hover"; /* "hover", "always", "off" */
-  --nsfw-blur-contained: "off"; /* "on", "off" */
-  --open-misc-info: "off"; /* "on", "off" */
+  --nsfw-blur-contained: "on"; /* "on", "off" */
+  --open-misc-info: "on"; /* "on", "off" */
   --glossary-separator: "off"; /* "on" to separate dictionaries in definition box */
-  --jitendex-format: "full"; /* "minimal" or space-separated list of "no-tags", "no-sentence", "no-forms", "no-xref", "no-img" */
+  --jitendex-format: "no-sentence"; /* "minimal" or space-separated list of "no-tags", "no-sentence", "no-forms", "no-xref", "no-img" */
   --img-ignore-display-scaling:  "off"; /* Modal images ignore display scaling */
 
   --mobile-main-picture-position: "right"; /* "left", "right", "alt" */
-  --mobile-sentence-position: "below";
+  --mobile-sentence-position: "above";
   --mobile-audio-buttons: "fixed"; /* "fixed", "header", "alt" */
 
   /* Pitch colors */
