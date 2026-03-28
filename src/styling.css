@@ -1136,3 +1136,32 @@ html.mobile .sentence, html:not(.mobile) .sentence-alt,
     }
   }
 }
+
+/* Custom CSS */
+[data-dictionary^="Jitendex"] {
+  /* Hide the line containing the dictionary name */
+  /* TODO: Backfill with `*-no-dictionary` handlebar to not need this */
+  i:first-of-type {
+    display: none;
+  }
+}
+
+.yomitan-glossary:has([data-dictionary^="JMdict"]) {
+  /* Remove unnecessary list numbers */
+  /* TODO: May be relevant to expand to non-JMdict cases too */
+  ol {
+    list-style-type: none !important;
+    padding: 0 !important;
+  }
+
+  /* Make the sub-list elements like "Notes" / "See Also" flush with the side */
+  ul {
+    list-style-position: inside !important;
+    padding-inline-start: 0 !important;
+  }
+
+  /* Make the headers in the forms table not bold, for readability */
+  [data-sc-content="formsTable"] th {
+    font-weight: normal !important;
+  }
+}
