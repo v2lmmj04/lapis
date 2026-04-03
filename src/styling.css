@@ -686,12 +686,6 @@ footer {
   /* weird hack needed to make the image stay in line with the .def-header */
 }
 
-.mobile .dh-vocab {
-  background: none;
-  padding: 0em;
-  border-radius: 0px;
-}
-
 .mobile .dh-vocab:has(~ .dh-image) {
   max-width: 60vw;
 }
