@@ -1138,11 +1138,18 @@ html.mobile .sentence, html:not(.mobile) .sentence-alt,
 }
 
 .yomitan-glossary:has([data-dictionary^="JMdict"]) {
-  /* Remove unnecessary list numbers */
-  /* TODO: May be relevant to expand to non-JMdict cases too */
-  ol {
-    list-style-type: none !important;
-    padding: 0 !important;
+  /*
+  Remove unnecessary list numbers since Yomitan includes sense numbers
+  inside the tag text / italic elements.
+  Hoshi Reader does not include the sense numbers, so this targets differences
+  in their generated HTML to still show them in that case.
+  Problem: Numbers are shown for the "forms" line only for Hoshi Reader.
+  */
+  &:not(:has(.structured-content)) {
+    ol {
+      list-style-type: none !important;
+      padding: 0 !important;
+    }
   }
 
   /* Make the sub-list elements like "Notes" / "See Also" flush with the side */
